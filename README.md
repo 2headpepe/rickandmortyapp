@@ -1,16 +1,69 @@
 # rickandmorty
 
-A new Flutter project.
+Introducing an advanced app that uses the Flutter framework and an API to bring the world of Rick and Morty characters to your smartphone. With seamless integration and the bloc architecture, this app provides real-time, comprehensive information about characters, including names, species, origins, and more. Experience the captivating world of Rick and Morty with this immersive and user-friendly app, perfect for fans and newcomers alike.
 
-## Getting Started
+# UI
 
-This project is a starting point for a Flutter application.
+| Getting data (state - loading) | Got data (state - loaded) | Error (state - error) |
+| :----------------------------: | :-----------------------: | :-------------------: |
+|    ![](images/loading.jpg)     |  ![](images/loaded.jpg)   | ![](images/error.jpg) |
 
-A few resources to get you started if this is your first Flutter project:
+# api
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Get all characters - https://rickandmortyapi.com/api/character
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```json
+{
+  "info": {
+    "count": 826,
+
+    "pages": 42,
+
+    "next": "https://rickandmortyapi.com/api/character/?page=2",
+
+    "prev": null
+  },
+
+  "results": [
+    {
+      "id": 1,
+
+      "name": "Rick Sanchez",
+
+      "status": "Alive",
+
+      "species": "Human",
+
+      "type": "",
+
+      "gender": "Male",
+
+      "origin": {
+        "name": "Earth",
+
+        "url": "https://rickandmortyapi.com/api/location/1"
+      },
+
+      "location": {
+        "name": "Earth",
+
+        "url": "https://rickandmortyapi.com/api/location/20"
+      },
+
+      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/1",
+
+        "https://rickandmortyapi.com/api/episode/2" // ...
+      ],
+
+      "url": "https://rickandmortyapi.com/api/character/1",
+
+      "created": "2017-11-04T18:48:46.250Z"
+    } // ...
+  ]
+}
+```
+
+![](images/api.png)
